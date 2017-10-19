@@ -46,7 +46,7 @@ class MCDemoUITests: XCTestCase {
         let choic1Button = app?.buttons["Choice 1"]
         choic1Button?.tap()
   
-        /*
+    
         MCLabel.labelStep("Selected View")
         // did transition to a correct view
         let doneButton = app?.navigationBars.buttons["Done"]
@@ -59,7 +59,7 @@ class MCDemoUITests: XCTestCase {
         expectation(for: exists, evaluatedWith: mainPageText as Any, handler: nil)
         waitForExpectations(timeout: 5, handler: nil)
         MCLabel.labelStep("Back to main view")
- */
+ 
     }
 
     
