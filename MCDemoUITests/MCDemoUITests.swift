@@ -39,15 +39,13 @@ class MCDemoUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         let exists = NSPredicate(format: "exists == true")
-
        
         // nav to the choice 1 view
         let choic1Button = app.buttons["Choice 1"]
         choic1Button.tap()
-  
         
         //MCLabel.labelStep("Selected View")
-        // did transition to a correct view
+        // did we transition to a correct view
         let doneButton = app.navigationBars.buttons["Done"]
         expectation(for: exists, evaluatedWith: doneButton as Any, handler: nil)
         waitForExpectations(timeout: 20, handler: nil)
