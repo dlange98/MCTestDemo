@@ -45,20 +45,20 @@ class MCDemoUITests: XCTestCase {
         let choic1Button = app.buttons["Choice 1"]
         choic1Button.tap()
   
-        /*
-        MCLabel.labelStep("Selected View")
+        
+        //MCLabel.labelStep("Selected View")
         // did transition to a correct view
-        let doneButton = app?.navigationBars.buttons["Done"]
+        let doneButton = app.navigationBars.buttons["Done"]
         expectation(for: exists, evaluatedWith: doneButton as Any, handler: nil)
         waitForExpectations(timeout: 20, handler: nil)
         
         // exit the view
-        app?.buttons["Done"].tap()
-        let mainPageText = app?.buttons["Choice 1"]
+        app.buttons["Done"].tap()
+        let mainPageText = app.buttons["Choice 1"]
         expectation(for: exists, evaluatedWith: mainPageText as Any, handler: nil)
         waitForExpectations(timeout: 5, handler: nil)
-        MCLabel.labelStep("Back to main view")
- */
+        //MCLabel.labelStep("Back to main view")
+ 
     }
 
     

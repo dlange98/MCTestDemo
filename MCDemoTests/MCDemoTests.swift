@@ -32,7 +32,7 @@ class MCDemoTests: XCTestCase {
         // This is an example of a performance test case.
         self.measure {
             
-            for index in 1...100 {
+            for index in 1...20 {
                 print(index)
             }
         }
