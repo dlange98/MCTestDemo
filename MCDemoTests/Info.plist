@@ -23,7 +23,7 @@
         <dict>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>appcenter-${99707da6-e4e4-4f69-8355-aa500647d3a4}</string>
+                <string>appcenter-99707da6-e4e4-4f69-8355-aa500647d3a4</string>
             </array>
         </dict>
     </array>
