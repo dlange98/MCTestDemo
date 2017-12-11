@@ -6,6 +6,7 @@ target 'MCDemo' do
   use_frameworks!
 
   # Pods for MCDemo
+  pod 'AppCenter'
     
   target 'MCDemoTests' do
     inherit! :search_paths
