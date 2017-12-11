@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             MSDistribute.self
             ])
         
+        MSDistribute.setEnabled(true)
+        
         return true
     }
 
