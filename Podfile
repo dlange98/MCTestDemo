@@ -11,6 +11,7 @@ target 'MCDemo' do
     
   target 'MCDemoTests' do
     inherit! :search_paths
+    pod 'AppCenterXCUITestExtensions'
     # Pods for testing
   end
 

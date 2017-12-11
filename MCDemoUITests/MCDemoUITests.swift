@@ -25,7 +25,7 @@ class MCDemoUITests: XCTestCase {
         }
         
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        let app = XCUIApplication()
+        let app = ACTLaunch.launch();
         
         app.launch()
         app.swipeUp()
