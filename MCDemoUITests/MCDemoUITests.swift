@@ -22,36 +22,18 @@ class MCDemoUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         
-//        addUIInterruptionMonitor(withDescription: "Allow Alerts Dialog") { (alert) -> Bool in
-//            ACTLabel.labelStep("in UIInterupt")
-//            alert.buttons["Don’t Allow"].tap()
-//            return true
-//        }
+        addUIInterruptionMonitor(withDescription: "Allow Alerts Dialog") { (alert) -> Bool in
+            ACTLabel.labelStep("in UIInterupt")
+            alert.buttons["Don’t Allow"].tap()
+            return true
+        }
        
     
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         app = ACTLaunch.launch()!;
         app.swipeUp()
         
-        var systemAlerts = XCUIApplication(bundleIdentifier: "com.apple.springboard").alerts
-        if systemAlerts.buttons["Cancel"].exists {
-            systemAlerts.buttons["Cancel"].tap()
-        }
-        if systemAlerts.buttons["Don’t Allow"].exists {
-            systemAlerts.buttons["Don’t Allow"].tap()
-        }
-        ACTLabel.labelStep("Selected View")
-        
-        app.swipeUp()
-        systemAlerts = XCUIApplication(bundleIdentifier: "com.apple.springboard").alerts
-        if systemAlerts.buttons["Cancel"].exists {
-            systemAlerts.buttons["Cancel"].tap()
-        }
-        if systemAlerts.buttons["Don’t Allow"].exists {
-            systemAlerts.buttons["Don’t Allow"].tap()
-        }
-        
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
         // Are we on the correct view
         let exists = NSPredicate(format: "exists == true")
         let choic1Button = app.buttons["Choice 1"]
