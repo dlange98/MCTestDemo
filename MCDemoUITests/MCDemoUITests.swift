@@ -22,6 +22,11 @@ class MCDemoUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         
+        addUIInterruptionMonitor(withDescription: "Allow Alerts Dialog") { (alert) -> Bool in
+            alert.buttons["Don’t Allow"].tap()
+            return true
+        }
+        
         addUIInterruptionMonitor(withDescription: "Location Dialog") { (alert) -> Bool in
             alert.buttons["Cancel"].tap()
             return true
