@@ -8,6 +8,7 @@ target 'MCDemo' do
   # Pods for MCDemo
   pod 'AppCenter'
   pod 'AppCenter/Distribute'
+  pod 'AppCenter/Push'
     
   target 'MCDemoTests' do
     inherit! :search_paths

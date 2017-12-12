@@ -11,6 +11,7 @@ import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
 import AppCenterDistribute
+import AppCenterPush
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MSAppCenter.start("99707da6-e4e4-4f69-8355-aa500647d3a4", withServices:[
             MSAnalytics.self,
             MSCrashes.self,
+            MSPush.self,
             MSDistribute.self
             ])
         
