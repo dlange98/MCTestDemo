@@ -49,23 +49,24 @@ class MCDemoUITests: XCTestCase {
 
     func testExample() {
         let exists = NSPredicate(format: "exists == true")
-       
+        ACTLabel.labelStep("starting View")
+        
         // nav to the choice 1 view
         let choic1Button = app.buttons["Choice 1"]
         choic1Button.tap()
-        
-        ACTLabel.labelStep("Selected View")
+       
         // did we transition to a correct view
         let doneButton = app.navigationBars.buttons["Done"]
         expectation(for: exists, evaluatedWith: doneButton as Any, handler: nil)
         waitForExpectations(timeout: 20, handler: nil)
+        ACTLabel.labelStep("Selected View")
         
         // exit the view
         app.buttons["Done"].tap()
         let mainPageText = app.buttons["Choice 1"]
         expectation(for: exists, evaluatedWith: mainPageText as Any, handler: nil)
         waitForExpectations(timeout: 5, handler: nil)
-        //MCLabel.labelStep("Back to main view")
+        ACTLabel.labelStep("Back to main view")
  
     }
 
