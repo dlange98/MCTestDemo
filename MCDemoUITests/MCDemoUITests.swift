@@ -23,18 +23,11 @@ class MCDemoUITests: XCTestCase {
         continueAfterFailure = false
         
         addUIInterruptionMonitor(withDescription: "Allow Alerts Dialog") { (alert) -> Bool in
-             ACTLabel.labelStep("in UIInterupt")
+            ACTLabel.labelStep("in UIInterupt")
             alert.buttons["Don’t Allow"].tap()
-            alert.buttons["Cancel"].tap()
             return true
         }
         
-        addUIInterruptionMonitor(withDescription: "Location Dialog") { (alert) -> Bool in
-            alert.buttons["Cancel"].tap()
-            alert.buttons["Don’t Allow"].tap()
-            return true
-        }
-
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         app = ACTLaunch.launch()!;
         app.swipeUp()
