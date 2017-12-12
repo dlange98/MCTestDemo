@@ -23,19 +23,22 @@ class MCDemoUITests: XCTestCase {
         continueAfterFailure = false
         
         addUIInterruptionMonitor(withDescription: "Allow Alerts Dialog") { (alert) -> Bool in
+             ACTLabel.labelStep("in UIInterupt")
             alert.buttons["Don’t Allow"].tap()
+            alert.buttons["Cancel"].tap()
             return true
         }
         
         addUIInterruptionMonitor(withDescription: "Location Dialog") { (alert) -> Bool in
             alert.buttons["Cancel"].tap()
+            alert.buttons["Don’t Allow"].tap()
             return true
         }
-        
+
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         app = ACTLaunch.launch()!;
         app.swipeUp()
-        
+         ACTLabel.labelStep("Selected View")
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
         // Are we on the correct view
         let exists = NSPredicate(format: "exists == true")
