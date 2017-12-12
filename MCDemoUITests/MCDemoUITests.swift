@@ -7,10 +7,13 @@
 //
 
 import XCTest
+import AppCenterXCUITestExtensions
 
 
 class MCDemoUITests: XCTestCase {
-        
+    
+    var app:XCUIApplication!
+    
     override func setUp() {
         super.setUp()
         
@@ -25,12 +28,8 @@ class MCDemoUITests: XCTestCase {
         }
         
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        let app = ACTLaunch.launch();
-        
-        app.launch()
+        app = ACTLaunch.launch()!;
         app.swipeUp()
-        //app.buttons["Request Location"].tap()
-        //app.tap() // need to interact with the app for the handler to fire
         
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
         // Are we on the correct view
@@ -43,18 +42,17 @@ class MCDemoUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        XCUIApplication().terminate()
     }
 
     func testExample() {
-        let app = XCUIApplication()
-        app.launch()
         let exists = NSPredicate(format: "exists == true")
        
         // nav to the choice 1 view
         let choic1Button = app.buttons["Choice 1"]
         choic1Button.tap()
         
-        //MCLabel.labelStep("Selected View")
+        ACTLabel.labelStep("Selected View")
         // did we transition to a correct view
         let doneButton = app.navigationBars.buttons["Done"]
         expectation(for: exists, evaluatedWith: doneButton as Any, handler: nil)
