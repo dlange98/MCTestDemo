@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AppCenterAnalytics
 
 
 class ViewController: UIViewController {
@@ -31,7 +32,13 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CHOICE1_SEGUE" {
+            MSAnalytics.trackEvent("Selection", withProperties: ["Category" : "Choice 1"])
+        }
         
+        if segue.identifier == "CHOICE2_SEGUE" {
+            MSAnalytics.trackEvent("Selection", withProperties: ["Category" : "Choice 2"])
+        }
     }
     
     func getBuildNumber() {
