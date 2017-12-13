@@ -387,7 +387,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MCDemo/Pods-MCDemo-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/AppCenter/AppCenterDistributeResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/AppCenter/AppCenterDistributeResources.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -671,10 +671,10 @@
 				INFOPLIST_FILE = MCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cardinal.mcdemoinclass;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cardinal.MCDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d9be8a48-f3b5-4e4e-ab15-e6c9a6e8f4f8";
-				PROVISIONING_PROFILE_SPECIFIER = "MCDemo In Class Dev";
+				PROVISIONING_PROFILE = "964cad88-bd02-48a9-aeed-0bba8c0c3c1a";
+				PROVISIONING_PROFILE_SPECIFIER = "MCDemo Dev Profile";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -693,10 +693,10 @@
 				INFOPLIST_FILE = MCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cardinal.mcdemoinclass;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cardinal.MCDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d5572423-de2b-4044-8a21-8101dc0b1a63";
-				PROVISIONING_PROFILE_SPECIFIER = "MCDemo In Class Prod";
+				PROVISIONING_PROFILE = "2d723ace-d665-451b-a7f5-f7b2d1e75c01";
+				PROVISIONING_PROFILE_SPECIFIER = "MCDemo Prod Profile";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
