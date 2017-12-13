@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             MSAnalytics.self,
             MSCrashes.self,
             MSPush.self,
-//            MSDistribute.self
+            MSDistribute.self
             ])
         
         MSDistribute.setEnabled(true)
