@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import AppCenterXCUITestExtensions
 
 class MCDemoUITests: XCTestCase {
     
@@ -26,8 +27,8 @@ class MCDemoUITests: XCTestCase {
         }
         
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        //app = ACTLaunch.launch()!;
-        app = XCUIApplication()
+        app = ACTLaunch.launch()!;
+        //app = XCUIApplication()
         app.launch()
         app.swipeUp()
         
