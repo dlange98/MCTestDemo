@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D787537662977C07F19B6A1A6B356BBC'
-               BlueprintName = 'AppCenterXCUITestExtensions'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'AppCenterXCUITestExtensions.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D787537662977C07F19B6A1A6B356BBC"
+               BlueprintName = "AppCenterXCUITestExtensions"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "AppCenterXCUITestExtensions.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
